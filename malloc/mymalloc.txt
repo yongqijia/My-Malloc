@@ -1,0 +1,7 @@
+Yongqi Jia
+Project#3
+A Custom malloc()
+
+Inside my test.c, I malloc the the chunk size of 10 and 70, and then I free the first and second part and malloc another chunk size of 40. test1() test whether mymalloc can work properly when free the head. test2() I test when allocate a bigger memory, mymalloc can work properly. It will find the fit chunk to allocate it.
+
+At my mymalloc.c, to make sure you don’t lose the beginning or end of my linked list, I have two global variables to keep track of either end. And I use a while loop to loop through the linked list to find the fit position to allocate. Outside the while loop, just add a new chunk to the tail. At my_free(), I consider about three different situation, and I think I handle the tail and head properly.
